@@ -1,7 +1,6 @@
 import {
   aboutUsPath,
   blogPath,
-  contactPath,
   ourFarmPath,
   productsPath,
 } from "@/utils/paths";
@@ -22,9 +21,5 @@ export const NAVLINKS = [
   {
     label: "Blog",
     path: blogPath,
-  },
-  {
-    label: "Contact",
-    path: contactPath,
   },
 ];
