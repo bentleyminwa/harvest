@@ -15,11 +15,11 @@ export const NAVLINKS = [
     path: ourFarmPath,
   },
   {
-    label: "Products",
-    path: productsPath,
-  },
-  {
     label: "Blog",
     path: blogPath,
+  },
+  {
+    label: "Products",
+    path: productsPath,
   },
 ];

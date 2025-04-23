@@ -1,12 +1,12 @@
 import Image from "next/image";
 
-type ImageProps = {
+export type ImageProps = {
   src: string;
   alt: string;
 };
 
 type HeaderProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   image: ImageProps;
   title: string;
   pageHeader?: React.ReactNode;
