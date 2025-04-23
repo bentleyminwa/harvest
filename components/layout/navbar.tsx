@@ -4,7 +4,7 @@ import Logo from "../ui/logo";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-3 left-[50%] -translate-x-[50%] flex items-center justify-between p-4 border w-3/4">
+    <nav className="fixed top-3 left-[50%] -translate-x-[50%] flex items-center justify-between p-4 w-3/4 z-20 bg-zinc-100 shadow-lg">
       <Link href={"/"}>
         <Logo />
       </Link>
