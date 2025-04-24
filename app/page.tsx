@@ -4,6 +4,7 @@ import CategoryList from "@/components/ui/category-list";
 import Header from "@/components/ui/header";
 import Section from "@/components/ui/section";
 import SectionContent from "@/components/ui/section-content";
+import SectionImage from "@/components/ui/sectionImage";
 import { aboutUsPath, ourFarmPath, productsPath } from "@/utils/paths";
 
 export default function Homepage() {
@@ -44,7 +45,11 @@ export default function Homepage() {
             <PrimaryButton href={ourFarmPath}>Our Farm</PrimaryButton>
           }
         />
-        <CardList />
+        <SectionImage
+          primaryImage={{ src: "/images/ui/cow.jpg", alt: "Cow" }}
+          secondaryImage={{ src: "/images/ui/chicken1.jpg", alt: "Chicken" }}
+          className="w-2/3"
+        />
       </Section>
     </>
   );
