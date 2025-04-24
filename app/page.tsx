@@ -1,13 +1,8 @@
 import { PrimaryButton, SecondaryButton } from "@/components/ui/button";
-import Card from "@/components/ui/card";
+import CardList from "@/components/ui/card-list";
+import CategoryList from "@/components/ui/category-list";
 import Header from "@/components/ui/header";
-import { ourFarmPath, productsPath } from "@/utils/paths";
-import {
-  LucideCarrot,
-  LucideFlower2,
-  LucideRabbit,
-  LucideUsers,
-} from "lucide-react";
+import { aboutUsPath, ourFarmPath, productsPath } from "@/utils/paths";
 
 export default function Homepage() {
   return (
@@ -24,33 +19,32 @@ export default function Homepage() {
           <SecondaryButton href={ourFarmPath}>Our Farm</SecondaryButton>
         </div>
       </Header>
-      {/* section */}
-      <section className="grid grid-cols-2 gap-4 w-3/4 mx-auto py-20">
+      {/* section A */}
+      <section className="grid grid-cols-2 gap-10 w-3/4 mx-auto py-20">
         {/* card collection */}
-        <div className="grid grid-cols-2 gap-4">
-          <Card
-            icon={<LucideCarrot />}
-            stat="450+"
-            description="Different fruits & vegetables  for every season"
-          />
-          <Card
-            icon={<LucideRabbit />}
-            stat="23+"
-            description="Variations of animals that roam free on the farm"
-          />
-          <Card
-            icon={<LucideFlower2 />}
-            stat="10"
-            description="Hectare of land where we grow our organic products on"
-          />
-          <Card
-            icon={<LucideUsers />}
-            stat="6000+"
-            description="Customers that visit our farm and buy our products"
-          />
-        </div>
+        <CardList />
         {/* section content */}
-        <div></div>
+        <div className="flex items-center">
+          <div className="space-y-5">
+            <h3 className="uppercase text-lg font-bold text-[#8da583]">
+              --- Who We Are
+            </h3>
+            <h2 className="text-5xl font-bold">
+              We Started as a Cow Farm in 1980
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+              aspernatur, nemo in odio officia ab? Pariatur molestias sequi
+              aspernatur magni illo dolorum labore quos nobis, officia,
+              doloribus, nemo error! Quae, vel perspiciatis!
+            </p>
+            <PrimaryButton href={aboutUsPath}>About Us</PrimaryButton>
+          </div>
+        </div>
+      </section>
+      {/* section B */}
+      <section>
+        <CategoryList />
       </section>
     </>
   );
