@@ -1,7 +1,7 @@
 type SectionContentProps = {
   sectionHeading: string;
   sectionTitle: string;
-  sectionDescription: string;
+  sectionDescription?: string;
   sectionButton?: React.ReactNode;
   className?: string;
 };

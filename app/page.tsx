@@ -22,7 +22,7 @@ export default function Homepage() {
         </div>
       </Header>
 
-      <Section>
+      <Section className="grid-cols-2 gap-10 w-3/4 mx-auto py-20">
         <CardList />
         <SectionContent
           sectionHeading="Who We Are"
@@ -36,7 +36,7 @@ export default function Homepage() {
 
       <CategoryList />
 
-      <Section>
+      <Section className="grid-cols-2 gap-10 w-3/4 mx-auto py-20">
         <SectionContent
           sectionHeading="Story Behind the Farm"
           sectionTitle="Farming for Today and the Future"
@@ -50,6 +50,29 @@ export default function Homepage() {
           secondaryImage={{ src: "/images/ui/chicken1.jpg", alt: "Chicken" }}
           className="w-2/3"
         />
+      </Section>
+
+      <Section className="w-11/12 mx-auto grid-cols-2 gap-8 py-20">
+        <SectionContent
+          sectionHeading="What We Do"
+          sectionTitle="Our produce is grown naturally, with sustainable, organic principles."
+          sectionDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+          className="bg-lime-900 text-white p-24"
+        />
+        <SectionImage
+          primaryImage={{ src: "/images/ui/harvest.jpg", alt: "Farm" }}
+          className="w-full"
+        />
+      </Section>
+
+      <Section className="w-3/4 mx-auto flex flex-col gap-10">
+        <div className="flex items-center justify-between">
+          <SectionContent
+            sectionHeading="What We Stand For"
+            sectionTitle="What We Grow, Plus a Whole Lot More!"
+          />
+          <PrimaryButton href={productsPath}>Products</PrimaryButton>
+        </div>
       </Section>
     </>
   );

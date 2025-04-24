@@ -3,7 +3,7 @@ import CategoryCard from "./category-card";
 
 export default function CategoryList() {
   return (
-    <div className="mx-5 grid grid-cols-3 gap-5">
+    <div className="w-11/12 mx-auto grid grid-cols-3 gap-5">
       {productCategoryList.map((category, index) => (
         <CategoryCard
           key={index}
