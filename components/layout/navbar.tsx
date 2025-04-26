@@ -1,4 +1,5 @@
 import { NAVLINKS } from "@/lib/data";
+import { contactPath } from "@/utils/paths";
 import Link from "next/link";
 import Button from "../ui/button";
 import Logo from "../ui/logo";
@@ -20,9 +21,9 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <Link href={"/contact"}>
-          <Button primary>Contact</Button>
-        </Link>
+        <Button primary href={contactPath}>
+          Contact
+        </Button>
       </div>
     </nav>
   );
