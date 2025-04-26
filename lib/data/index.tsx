@@ -6,8 +6,12 @@ import {
 } from "@/utils/paths";
 import {
   LucideCarrot,
+  LucideClover,
   LucideFlower2,
+  LucideHandHeart,
+  LucideLeaf,
   LucideRabbit,
+  LucideTractor,
   LucideUsers,
 } from "lucide-react";
 
@@ -30,26 +34,49 @@ export const NAVLINKS = [
   },
 ];
 
-export const cardData = [
+export const aboutUsCardData = [
   {
     icon: <LucideCarrot />,
-    stat: "450+",
+    title: "450+",
     description: "Different fruits & vegetables  for every season",
   },
   {
     icon: <LucideRabbit />,
-    stat: "23+",
+    title: "23+",
     description: "Variations of animals that roam free on the farm",
   },
   {
     icon: <LucideFlower2 />,
-    stat: "10",
+    title: "10",
     description: "Hectare of land where we grow our organic products on",
   },
   {
     icon: <LucideUsers />,
-    stat: "6000+",
+    title: "6000+",
     description: "Customers that visit our farm and buy our products",
+  },
+];
+
+export const productInfoCardData = [
+  {
+    icon: <LucideLeaf />,
+    title: "100% Organic",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    icon: <LucideHandHeart />,
+    title: "Animal Care",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    icon: <LucideTractor />,
+    title: "Locally Grown",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    icon: <LucideClover />,
+    title: "No Pesticides",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
 

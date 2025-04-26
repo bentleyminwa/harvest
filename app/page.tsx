@@ -1,10 +1,12 @@
 import { PrimaryButton, SecondaryButton } from "@/components/ui/button";
+import Card from "@/components/ui/card";
 import CardList from "@/components/ui/card-list";
 import CategoryList from "@/components/ui/category-list";
 import Header from "@/components/ui/header";
 import Section from "@/components/ui/section";
 import SectionContent from "@/components/ui/section-content";
 import SectionImage from "@/components/ui/sectionImage";
+import { productInfoCardData } from "@/lib/data";
 import { aboutUsPath, ourFarmPath, productsPath } from "@/utils/paths";
 
 export default function Homepage() {
@@ -73,6 +75,16 @@ export default function Homepage() {
           />
           <PrimaryButton href={productsPath}>Products</PrimaryButton>
         </div>
+        <Section className="grid-cols-4 gap-8 pb-20">
+          {productInfoCardData.map((card, index) => (
+            <Card
+              key={index}
+              icon={card.icon}
+              title={card.title}
+              description={card.description}
+            />
+          ))}
+        </Section>
       </Section>
     </>
   );

@@ -1,14 +1,14 @@
-import { cardData } from "@/lib/data";
+import { aboutUsCardData } from "@/lib/data";
 import Card from "./card";
 
 export default function CardList() {
   return (
     <div className="grid grid-cols-2 gap-8">
-      {cardData.map((card) => (
+      {aboutUsCardData.map((card) => (
         <Card
-          key={card.stat}
+          key={card.title}
           icon={card.icon}
-          stat={card.stat}
+          title={card.title}
           description={card.description}
         />
       ))}
