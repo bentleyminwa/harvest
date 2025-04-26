@@ -33,7 +33,7 @@ export default function Header({
         className="object-cover -z-10"
       />
       {/* overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/30 via-black/30 -z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/30 via-black/30 -z-10" />
       {/* content */}
       <div className="text-white w-3/4 mx-auto pt-52">
         <div className="w-2/3 space-y-7">

@@ -2,6 +2,7 @@ import { PrimaryButton, SecondaryButton } from "@/components/ui/button";
 import Card from "@/components/ui/card";
 import CardList from "@/components/ui/card-list";
 import CategoryList from "@/components/ui/category-list";
+import ContactBanner from "@/components/ui/contact-banner";
 import Header from "@/components/ui/header";
 import Section from "@/components/ui/section";
 import SectionContent from "@/components/ui/section-content";
@@ -86,6 +87,10 @@ export default function Homepage() {
           ))}
         </Section>
       </Section>
+
+      <ContactBanner />
+
+      <footer className="mt-10">Copyright</footer>
     </>
   );
 }
