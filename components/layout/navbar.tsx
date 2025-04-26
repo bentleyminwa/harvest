@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-3 left-[50%] -translate-x-[50%] flex items-center justify-between p-4 w-3/4 z-20 bg-zinc-100 shadow-lg">
       <Link href={"/"}>
-        <Logo />
+        <Logo className="text-2xl" />
       </Link>
       <div className="flex items-center gap-5">
         <ul className="flex gap-5">

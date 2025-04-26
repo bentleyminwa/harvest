@@ -24,7 +24,7 @@ export default function RootLayout({
         className={`${quicksand.className} bg-zinc-100 text-lime-900 antialiased`}
       >
         <Navbar />
-        <main>{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

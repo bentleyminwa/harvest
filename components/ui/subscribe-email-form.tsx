@@ -4,7 +4,7 @@ import Button from "./button";
 
 export default function SubscribeEmailForm() {
   return (
-    <form onSubmit={(e) => e.preventDefault()}>
+    <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-4">
       <label htmlFor="email" className="hidden">
         Email:
       </label>
@@ -13,9 +13,9 @@ export default function SubscribeEmailForm() {
         id="email"
         name="email"
         placeholder="Enter your email"
-        className="p-2 border rounded"
+        className="p-2 border rounded w-full"
       />
-      <Button primary type="submit" onClick={() => alert("Subscribed!")}>
+      <Button primary type="submit" className="w-full">
         Subsribe
       </Button>
     </form>
