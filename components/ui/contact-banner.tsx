@@ -4,7 +4,7 @@ import Section from "./section";
 
 export default function ContactBanner() {
   return (
-    <Section className="relative w-11/12 h-[450px] mx-auto pt-20 flex justify-center items-center">
+    <Section className="relative w-11/12 h-[450px] mx-auto mt-20 pt-20 flex justify-center items-center">
       <Image
         src="/images/ui/farm.jpg"
         alt="Farm"

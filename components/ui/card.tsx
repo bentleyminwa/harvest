@@ -24,7 +24,7 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={clsx(
-      "border-2 border-[#d6e0d2] w-fit rounded-tl-4xl rounded-br-4xl flex flex-col gap-4 p-8",
+      "border-2 border-[#d6e0d2] w-fit rounded-tl-4xl rounded-br-4xl flex",
       className
     )}
     {...props}

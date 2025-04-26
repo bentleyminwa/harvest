@@ -22,10 +22,9 @@ export default function Button({
 }: ButtonProps) {
   return href ? (
     <Link
-      {...props}
       href={href}
       className={clsx(
-        "border-2 p-4 rounded-tl-3xl rounded-br-3xl font-bold uppercase tracking-wider text-white",
+        "border-2 p-4 rounded-tl-3xl rounded-br-3xl font-bold uppercase tracking-wider text-white w-fit",
         {
           "bg-orange-900 hover:bg-orange-950 border-orange-900 hover:border-orange-950 cursor-pointer":
             primary,
@@ -35,14 +34,14 @@ export default function Button({
         },
         className
       )}
+      {...props}
     >
       {children}
     </Link>
   ) : (
     <button
-      {...props}
       className={clsx(
-        "border-2 p-4 rounded-tl-3xl rounded-br-3xl font-bold uppercase tracking-wider text-white",
+        "border-2 p-4 rounded-tl-3xl rounded-br-3xl font-bold uppercase tracking-wider text-white w-fit",
         {
           "bg-orange-900 hover:bg-orange-950 border-orange-900 hover:border-orange-950 cursor-pointer":
             primary,
@@ -52,6 +51,7 @@ export default function Button({
         },
         className
       )}
+      {...props}
     >
       {children}
     </button>

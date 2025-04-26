@@ -15,7 +15,7 @@ export default function SectionContent({
 }: SectionContentProps) {
   return (
     <div className={`flex items-center ${className}`}>
-      <div className="space-y-5">
+      <div className="flex flex-col gap-5">
         <h3 className="uppercase text-lg font-bold text-[#8da583]">
           --- {sectionHeading}
         </h3>

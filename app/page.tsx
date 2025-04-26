@@ -1,5 +1,4 @@
 import Button from "@/components/ui/button";
-import { Card, CardContent, CardIcon, CardTitle } from "@/components/ui/card";
 import CardList from "@/components/ui/card-list";
 import CategoryList from "@/components/ui/category-list";
 import ContactBanner from "@/components/ui/contact-banner";
@@ -7,7 +6,7 @@ import Header from "@/components/ui/header";
 import Section from "@/components/ui/section";
 import SectionContent from "@/components/ui/section-content";
 import SectionImage from "@/components/ui/sectionImage";
-import { productInfoCardData } from "@/lib/data";
+import { aboutUsCardData, productInfoCardData } from "@/lib/data";
 import { aboutUsPath, ourFarmPath, productsPath } from "@/utils/paths";
 
 export default function Homepage() {
@@ -30,7 +29,10 @@ export default function Homepage() {
       </Header>
 
       <Section className="grid-cols-2 gap-10 w-3/4 mx-auto py-20">
-        <CardList />
+        <CardList
+          cardData={aboutUsCardData}
+          className="grid grid-cols-2 gap-8"
+        />
         <SectionContent
           sectionHeading="Who We Are"
           sectionTitle="We Started as a Cow Farm in 1980"
@@ -86,15 +88,11 @@ export default function Homepage() {
             Products
           </Button>
         </div>
-        <Section className="grid-cols-4 gap-8 pb-20">
-          {productInfoCardData.map((card, index) => (
-            <Card key={index}>
-              <CardIcon>{card.icon}</CardIcon>
-              <CardTitle className="text-2xl">{card.title}</CardTitle>
-              <CardContent>{card.description}</CardContent>
-            </Card>
-          ))}
-        </Section>
+
+        <CardList
+          cardData={productInfoCardData}
+          className="grid grid-cols-4 gap-8"
+        />
       </Section>
 
       <ContactBanner />
