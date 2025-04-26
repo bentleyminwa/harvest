@@ -1,6 +1,6 @@
 "use client";
 
-import Button from "./button";
+import { Button } from "./button";
 
 export default function SubscribeEmailForm() {
   return (
@@ -15,7 +15,7 @@ export default function SubscribeEmailForm() {
         placeholder="Enter your email"
         className="p-2 border rounded w-full"
       />
-      <Button primary type="submit" className="w-full">
+      <Button type="submit" className="w-full">
         Subsribe
       </Button>
     </form>

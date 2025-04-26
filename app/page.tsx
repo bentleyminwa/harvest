@@ -1,4 +1,4 @@
-import Button from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import CardList from "@/components/ui/card-list";
 import CategoryList from "@/components/ui/category-list";
 import ContactBanner from "@/components/ui/contact-banner";
@@ -7,7 +7,7 @@ import Section from "@/components/ui/section";
 import SectionContent from "@/components/ui/section-content";
 import SectionImage from "@/components/ui/sectionImage";
 import { aboutUsCardData, productInfoCardData } from "@/lib/data";
-import { aboutUsPath, ourFarmPath, productsPath } from "@/utils/paths";
+import Link from "next/link";
 
 export default function Homepage() {
   return (
@@ -19,11 +19,11 @@ export default function Homepage() {
         className="h-screen"
       >
         <div className="flex gap-7">
-          <Button primary href={productsPath}>
-            Products
+          <Button asChild>
+            <Link href={"/products"}>Products</Link>
           </Button>
-          <Button outline href={ourFarmPath}>
-            Our Farm
+          <Button variant={"secondary"} asChild>
+            <Link href={"/our-farm"}>Our Farm</Link>
           </Button>
         </div>
       </Header>
@@ -37,11 +37,7 @@ export default function Homepage() {
           sectionHeading="Who We Are"
           sectionTitle="We Started as a Cow Farm in 1980"
           sectionDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic aspernatur, nemo in odio officia ab? Pariatur molestias sequi aspernatur magni illo dolorum labore quos nobis, officia, doloribus, nemo error! Quae, vel perspiciatis!"
-          sectionButton={
-            <Button primary href={aboutUsPath}>
-              About Us
-            </Button>
-          }
+          sectionButton={<Button>About Us</Button>}
         />
       </Section>
 
@@ -52,11 +48,7 @@ export default function Homepage() {
           sectionHeading="Story Behind the Farm"
           sectionTitle="Farming for Today and the Future"
           sectionDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
-          sectionButton={
-            <Button primary href={ourFarmPath}>
-              Our Farm
-            </Button>
-          }
+          sectionButton={<Button>Our Farm</Button>}
         />
         <SectionImage
           primaryImage={{ src: "/images/ui/cow.jpg", alt: "Cow" }}
@@ -84,9 +76,7 @@ export default function Homepage() {
             sectionHeading="What We Stand For"
             sectionTitle="What We Grow, Plus a Whole Lot More!"
           />
-          <Button primary href={productsPath}>
-            Products
-          </Button>
+          <Button>Products</Button>
         </div>
 
         <CardList

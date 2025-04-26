@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "./button";
+import { Button } from "./button";
 import Section from "./section";
 
 export default function ContactBanner() {
@@ -20,9 +20,7 @@ export default function ContactBanner() {
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
           eaque quo tenetur.
         </p>
-        <Button primary href="/contact">
-          Contact Us
-        </Button>
+        <Button>Contact Us</Button>
       </div>
     </Section>
   );
