@@ -1,5 +1,5 @@
 import Button from "@/components/ui/button";
-import Card from "@/components/ui/card";
+import { Card, CardContent, CardIcon, CardTitle } from "@/components/ui/card";
 import CardList from "@/components/ui/card-list";
 import CategoryList from "@/components/ui/category-list";
 import ContactBanner from "@/components/ui/contact-banner";
@@ -88,12 +88,11 @@ export default function Homepage() {
         </div>
         <Section className="grid-cols-4 gap-8 pb-20">
           {productInfoCardData.map((card, index) => (
-            <Card
-              key={index}
-              icon={card.icon}
-              title={card.title}
-              description={card.description}
-            />
+            <Card key={index}>
+              <CardIcon>{card.icon}</CardIcon>
+              <CardTitle className="text-2xl">{card.title}</CardTitle>
+              <CardContent>{card.description}</CardContent>
+            </Card>
           ))}
         </Section>
       </Section>
