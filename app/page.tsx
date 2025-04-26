@@ -1,4 +1,4 @@
-import { PrimaryButton, SecondaryButton } from "@/components/ui/button";
+import Button from "@/components/ui/button";
 import Card from "@/components/ui/card";
 import CardList from "@/components/ui/card-list";
 import CategoryList from "@/components/ui/category-list";
@@ -20,8 +20,12 @@ export default function Homepage() {
         className="h-screen"
       >
         <div className="flex gap-7">
-          <PrimaryButton href={productsPath}>Products</PrimaryButton>
-          <SecondaryButton href={ourFarmPath}>Our Farm</SecondaryButton>
+          <Button primary href={productsPath}>
+            Products
+          </Button>
+          <Button outline href={ourFarmPath}>
+            Our Farm
+          </Button>
         </div>
       </Header>
 
@@ -32,7 +36,9 @@ export default function Homepage() {
           sectionTitle="We Started as a Cow Farm in 1980"
           sectionDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic aspernatur, nemo in odio officia ab? Pariatur molestias sequi aspernatur magni illo dolorum labore quos nobis, officia, doloribus, nemo error! Quae, vel perspiciatis!"
           sectionButton={
-            <PrimaryButton href={aboutUsPath}>About Us</PrimaryButton>
+            <Button primary href={aboutUsPath}>
+              About Us
+            </Button>
           }
         />
       </Section>
@@ -45,7 +51,9 @@ export default function Homepage() {
           sectionTitle="Farming for Today and the Future"
           sectionDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
           sectionButton={
-            <PrimaryButton href={ourFarmPath}>Our Farm</PrimaryButton>
+            <Button primary href={ourFarmPath}>
+              Our Farm
+            </Button>
           }
         />
         <SectionImage
@@ -74,7 +82,9 @@ export default function Homepage() {
             sectionHeading="What We Stand For"
             sectionTitle="What We Grow, Plus a Whole Lot More!"
           />
-          <PrimaryButton href={productsPath}>Products</PrimaryButton>
+          <Button primary href={productsPath}>
+            Products
+          </Button>
         </div>
         <Section className="grid-cols-4 gap-8 pb-20">
           {productInfoCardData.map((card, index) => (
@@ -89,8 +99,6 @@ export default function Homepage() {
       </Section>
 
       <ContactBanner />
-
-      <footer className="mt-10">Copyright</footer>
     </>
   );
 }

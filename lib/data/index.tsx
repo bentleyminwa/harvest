@@ -34,6 +34,25 @@ export const NAVLINKS = [
   },
 ];
 
+export const SOCIALS = [
+  {
+    label: "Facebook",
+    path: "https://www.facebook.com/",
+  },
+  {
+    label: "Instagram",
+    path: "https://www.instagram.com/",
+  },
+  {
+    label: "Twitter",
+    path: "https://www.twitter.com/",
+  },
+  {
+    label: "LinkedIn",
+    path: "https://www.linkedin.com/",
+  },
+];
+
 export const aboutUsCardData = [
   {
     icon: <LucideCarrot />,

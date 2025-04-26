@@ -1,47 +1,44 @@
+import clsx from "clsx";
 import Link from "next/link";
 
-type ButtonProps = {
-  children: React.ReactNode;
-  className?: string;
-  href?: string;
-};
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+  React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+    children: React.ReactNode;
+    className?: string;
+    href?: string;
+    primary?: boolean;
+    outline?: boolean;
+    disabled?: boolean;
+  };
 
 export default function Button({
   children,
   className,
   href,
+  primary,
+  outline,
+  disabled,
   ...props
 }: ButtonProps) {
-  return (
-    <Link href={href || "#"}>
-      <button
-        {...props}
-        className={`border-2 p-4 rounded-tl-3xl rounded-br-3xl font-bold uppercase tracking-wider cursor-pointer text-zinc-100 ${className}`}
-      >
-        {children}
-      </button>
-    </Link>
-  );
-}
+  const Tag = href ? Link : "button";
 
-export function PrimaryButton({ children, ...props }: ButtonProps) {
   return (
-    <Button
+    <Tag
       {...props}
-      className="bg-orange-900 hover:bg-orange-950 border-orange-900 hover:border-orange-950"
+      href={href || "#"}
+      className={clsx(
+        "border-2 p-4 rounded-tl-3xl rounded-br-3xl font-bold uppercase tracking-wider text-white",
+        {
+          "bg-orange-900 hover:bg-orange-950 border-orange-900 hover:border-orange-950 cursor-pointer":
+            primary,
+          "border-zinc-100 hover:bg-zinc-100 hover:text-lime-900 cursor-pointer":
+            outline,
+          "cursor-not-allowed opacity-50": disabled,
+        },
+        className
+      )}
     >
       {children}
-    </Button>
-  );
-}
-
-export function SecondaryButton({ children, ...props }: ButtonProps) {
-  return (
-    <Button
-      {...props}
-      className="border-zinc-100 hover:bg-zinc-100 hover:text-lime-900"
-    >
-      {children}
-    </Button>
+    </Tag>
   );
 }

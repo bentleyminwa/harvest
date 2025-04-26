@@ -1,5 +1,6 @@
 import { NAVLINKS } from "@/lib/data";
 import Link from "next/link";
+import Button from "../ui/button";
 import Logo from "../ui/logo";
 
 export default function Navbar() {
@@ -20,9 +21,7 @@ export default function Navbar() {
           ))}
         </ul>
         <Link href={"/contact"}>
-          <button className="bg-orange-900 hover:bg-orange-950 p-4 rounded-tl-3xl rounded-br-3xl text-zinc-100 font-bold uppercase tracking-wider cursor-pointer">
-            Contact
-          </button>
+          <Button primary>Contact</Button>
         </Link>
       </div>
     </nav>

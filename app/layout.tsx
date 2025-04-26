@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
@@ -22,10 +23,9 @@ export default function RootLayout({
       <body
         className={`${quicksand.className} bg-zinc-100 text-lime-900 antialiased`}
       >
-        <main>
-          <Navbar />
-          <section>{children}</section>
-        </main>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
