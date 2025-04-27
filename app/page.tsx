@@ -37,7 +37,11 @@ export default function Homepage() {
           sectionHeading="Who We Are"
           sectionTitle="We Started as a Cow Farm in 1980"
           sectionDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic aspernatur, nemo in odio officia ab? Pariatur molestias sequi aspernatur magni illo dolorum labore quos nobis, officia, doloribus, nemo error! Quae, vel perspiciatis!"
-          sectionButton={<Button>About Us</Button>}
+          sectionButton={
+            <Button asChild>
+              <Link href={"/about-us"}>About Us</Link>
+            </Button>
+          }
         />
       </Section>
 
@@ -48,7 +52,11 @@ export default function Homepage() {
           sectionHeading="Story Behind the Farm"
           sectionTitle="Farming for Today and the Future"
           sectionDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
-          sectionButton={<Button>Our Farm</Button>}
+          sectionButton={
+            <Button asChild>
+              <Link href={"/our-farm"}>Our Farm</Link>
+            </Button>
+          }
         />
         <SectionImage
           primaryImage={{ src: "/images/ui/cow.jpg", alt: "Cow" }}
@@ -76,7 +84,9 @@ export default function Homepage() {
             sectionHeading="What We Stand For"
             sectionTitle="What We Grow, Plus a Whole Lot More!"
           />
-          <Button>Products</Button>
+          <Button asChild>
+            <Link href={"/products"}>Products</Link>
+          </Button>
         </div>
 
         <CardList

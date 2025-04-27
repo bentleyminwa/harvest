@@ -20,7 +20,9 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <Button>Contact</Button>
+        <Button asChild>
+          <Link href={"/contact"}>Contact</Link>
+        </Button>
       </div>
     </nav>
   );
